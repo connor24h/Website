@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<title>Connor Hoglund</title>
+<link rel="stylesheet" href="index.css"> 
+<script src="https://kit.fontawesome.com/3a71be4aed.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="preload()">
+
+    <div id="preloader"></div>
+
+    <!-- Common Page Material -->
+    <header id="introduction">
+        <div class="intro-container">
+            <p class="intro-text" id="grad">Hi, I'm Connor Hoglund.</p>
+            <a href="https://www.instagram.com/connor24h/" alt="Connor's Instagram" title="Connor's Instagram" target="_blank"class="fab fa-instagram" style="font-size:40px;color:black;margin-right:10px;"></a>
+            <a href="https://www.linkedin.com/in/connorhoglund/" alt="Connor's LinkedIn" title="Connor's LinkedIn" target="_blank" class="fab fa-linkedin" style="font-size:40px;color:black;"></a>
+        </div>
+
+        <nav class="navbar">
+            <hr> 
+            <ul class="nav_links">
+                <li><a onClick="showPortfolio()">Portfolio</a></li>
+                <li><a onclick="showQualifications()">Qualifications</a></li>
+                <li><a onclick="showAboutMe()">About Me</a></li>
+            </ul>
+            <hr>
+        </nav>
+    </header>
+    
+    
+
+    <!-- Portfolio-->
+    <div style="display:none;" id="portfolio" class="animate-bottom">
+
+        <div class="wrapper">
+            <a href="https://www.youtube.com/" >
+                <div class="section">
+                    <h2 style="text-align:center;">What's Cookin</h2>
+                    <h6 style="text-align:center;">Group Project, October - November 2021</h6>
+                    <p class="section-text">
+                        What's Cookin gathers recipes from user selected ingredients. 
+                        Personally acted as product manager and lead front-end developer.
+                        Utilized React JS, as well as Spoonacular,  Google Text-to-Speech, and Kroger APIs to search for and display
+                        thousands of recipes. Features dark mode and text-to-speech accessibility features.
+                    </p>
+                    <img class="section-img" src="What's-Cookin.png" alt="What's Cookin?" />
+                </div>
+            </a>
+            <div class="section">
+                <h2 style="text-align:center;">StockWatch</h2>
+                <h6 style="text-align:center;">Solo Project, July - September 2021</h6>
+                    <p class="section-text">
+                        StockWatch helps users manage stock watchlists.
+                        Utilized Python, as well as Yahoo Finance API and MongoDB for user account information.
+                        Features a secure login system, with passwords salted and hashed before storage.
+                    </p>
+                    <img class="section-img" src="What's-Cookin.png" alt="What's Cookin?" />
+            </div>
+            <div class="section">
+                <h2 style="text-align:center;">Passwordifier</h2>
+            </div>
+            <div class="section">
+                <h2 style="text-align:center;">Mashify</h2>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- Qualifications -->
+    <div style="display:none;" id="qualifications" class="animate-bottom">
+        <h1> QUAL TEST</h1>
+    </div>
+
+    <!-- About Me -->
+    <div style="display:none;" id="aboutme" class="animate-bottom">
+        <h1> ABOUT TEST</h1>
+    </div>
+
+
+
+<script>
+    var loadVar;
+    function preload() {
+        loadVar = setTimeout(showPortfolio, 300);
+    }
+
+    function showPortfolio() {
+        document.getElementById("introduction").style.display = "block";
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("portfolio").style.display = "block";
+        document.getElementById("qualifications").style.display = "none";
+        document.getElementById("aboutme").style.display = "none";
+    }
+    function showQualifications() {
+        
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("portfolio").style.display = "none";
+        document.getElementById("qualifications").style.display = "block";
+        document.getElementById("aboutme").style.display = "none";
+    }
+    function showAboutMe() {
+        
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("portfolio").style.display = "none";
+        document.getElementById("qualifications").style.display = "none";
+        document.getElementById("aboutme").style.display = "block";
+        
+    }
+
+</script>
+
+
+</body>
+</html>
